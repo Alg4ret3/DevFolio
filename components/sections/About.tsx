@@ -60,7 +60,7 @@ export default function About() {
             className="text-3xl md:text-5xl font-orbitron font-bold text-center mb-16"
           >
             <span className="text-cyan-400 font-semibold text-4xl tracking-wide relative">
-              Sobre Mi
+              Sobre mí
               <span className="absolute inset-0 -z-10 rounded-lg bg-cyan-500 opacity-20 blur-xl"></span>
             </span>
           </motion.h2>
@@ -170,19 +170,33 @@ export default function About() {
                 <h3 className="text-xl font-orbitron font-bold text-white mb-4">
                   Tecnologías
                 </h3>
-                <div className="flex flex-wrap gap-3">
-                  {technologies.map((tech, index) => (
-                    <motion.span
-                      key={tech}
-                      initial={{ opacity: 0, scale: 0.8 }}
-                      whileInView={{ opacity: 1, scale: 1 }}
-                      transition={{ delay: index * 0.1 }}
-                      whileHover={{ scale: 1.1, rotateZ: 2 }}
-                      className="px-4 py-2 bg-gradient-to-r from-cyan-500/20 to-magenta-500/20 rounded-full border border-cyan-400/30 text-sm font-poppins text-cyan-300 hover:border-cyan-400 transition-colors neon-glow cursor-default"
-                    >
-                      {tech}
-                    </motion.span>
-                  ))}
+                <div className="relative overflow-hidden w-full py-6">
+                  {/* Cinta infinita */}
+                  <motion.div
+                    className="flex gap-4 w-max"
+                    animate={{ x: ["0%", "-50%"] }}
+                    transition={{
+                      repeat: Infinity,
+                      duration: 20,
+                      ease: "linear",
+                    }}
+                  >
+                    {[...technologies, ...technologies].map((tech, index) => (
+                      <motion.span
+                        key={index}
+                        initial={{ opacity: 0, scale: 0.8 }}
+                        whileInView={{ opacity: 1, scale: 1 }}
+                        whileHover={{ scale: 1.15, rotateZ: 2 }}
+                        transition={{ duration: 0.4 }}
+                        className="px-4 py-2 bg-gradient-to-r from-cyan-500/20 to-magenta-500/20 
+                       rounded-full border border-cyan-400/30 
+                       text-sm font-poppins text-cyan-300 
+                       hover:border-cyan-400 transition-colors neon-glow cursor-default"
+                      >
+                        {tech}
+                      </motion.span>
+                    ))}
+                  </motion.div>
                 </div>
               </div>
             </motion.div>
