@@ -2,6 +2,7 @@
 
 import { motion, Variants } from "framer-motion";
 import { ExternalLink, Github, Zap } from "lucide-react";
+import Image from "next/image";
 
 export default function Projects() {
   const projects = [
@@ -10,7 +11,7 @@ export default function Projects() {
       description:
         "Sistema de ventas tipo POS diseñado para locales comerciales. Incluye gestión de inventario, control de facturación y reportes en tiempo real. Compatible con Windows 10 y 11.",
       image:
-        "https://images.pexels.com/photos/6612717/pexels-photo-6612717.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=1920&h=1080",
+        "https://images.pexels.com/photos/6612717/pexels-photo-6612717.jpeg?auto=compress&cs=tinysrgb&dpr=1&?w=800&h=600",
 
       tech: ["Python", "Qt Designer", "SQL", "SQLite", "Windows 10/11"],
       liveUrl: "#",
@@ -23,7 +24,7 @@ export default function Projects() {
       description:
         "Plataforma web de inteligencia artificial para la identificación de especies de árboles a partir de imágenes, Integra un modelo entrenado con Detectron2 y desplegado en FastAPI, con frontend en Next.js/React y base de datos en Supabase.",
       image:
-        "https://images.pexels.com/photos/17484901/pexels-photo-17484901.png?auto=compress&cs=tinysrgb&dpr=1&w=1920&h=1080",
+        "https://images.pexels.com/photos/17484901/pexels-photo-17484901.png?auto=compress&cs=tinysrgb&dpr=1&?w=800&h=600",
 
       tech: [
         "Python",
@@ -44,7 +45,7 @@ export default function Projects() {
       description:
         "Página principal de nuestro emprendimiento de desarrollo web, funciona como punto de contacto para clientes y colaboradores, mostrando nuestra visión, servicios y la forma en que trabajamos como equipo. Integra consumo de APIs de Gmail para la comunicación y está construida con tecnologías modernas del ecosistema web.",
       image:
-        "https://images.pexels.com/photos/1181675/pexels-photo-1181675.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=1920&h=1080",
+        "https://images.pexels.com/photos/1181675/pexels-photo-1181675.jpeg?auto=compress&cs=tinysrgb&dpr=1&?w=800&h=600",
       tech: ["Next.js", "React", "TypeScript", "JavaScript", "Gmail API"],
       liveUrl: "https://tuplacore.vercel.app",
       githubUrl: "https://github.com/Alg4ret3/TuplaCoreWeb.git",
@@ -56,7 +57,7 @@ export default function Projects() {
       description:
         "Plataforma web para la gestión de gimnasios que permite a los usuarios registrarse, iniciar sesión, consultar el estado de sus membresías y acceder a planes de entrenamiento personalizados, incluye un panel administrativo para el control de suscripciones y rutinas.",
       image:
-        "https://images.pexels.com/photos/1552242/pexels-photo-1552242.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=1920&h=1080",
+        "https://images.pexels.com/photos/1552242/pexels-photo-1552242.jpeg?auto=compress&cs=tinysrgb&dpr=1&?w=800&h=600",
       tech: ["Next.js", "React", "TypeScript", "Prisma", "PostgreSQL"],
       liveUrl: "https://powergym-gamma.vercel.app/",
       githubUrl: "https://github.com/Alg4ret3/FitManage.git",
@@ -67,7 +68,7 @@ export default function Projects() {
       description:
         "Landing page para una droguería con un asistente virtual integrado basado en IA, el sistema permite a los usuarios realizar consultas sobre salud a través de un agente conversacional conectado a la API de ChatGPT, ofreciendo respuestas en tiempo real de manera confiable y accesible.",
       image:
-        "https://images.pexels.com/photos/208512/pexels-photo-208512.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=1920&h=1080",
+        "https://images.pexels.com/photos/208512/pexels-photo-208512.jpeg?auto=compress&cs=tinysrgb&dpr=1&?w=800&h=600",
       tech: ["React", "JavaScript", "Python", "FastAPI", "OpenAI API"],
       liveUrl: "#",
       githubUrl: "https://github.com/Alg4ret3/FarmaSystem.git",
@@ -79,7 +80,7 @@ export default function Projects() {
       description:
         "Sistema corporativo desarrollado para unificar y digitalizar cuatro módulos relacionados con la concesión de aguas, anteriormente, los procesos se manejaban de forma física, por lo que este sistema buscó automatizar la gestión y centralizar la información, mejorando la eficiencia administrativa.",
       image:
-        "https://images.pexels.com/photos/7876051/pexels-photo-7876051.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=3840&h=2160",
+        "https://images.pexels.com/photos/7876051/pexels-photo-7876051.jpeg?auto=compress&cs=tinysrgb&dpr=2&?w=800&h=600",
       tech: ["Python 3", "QtDesigner", "SQLite3", "Anaconda", "Event"],
       liveUrl: "#",
       githubUrl: "https://github.com/Alg4ret3/CorponarinoSys.git",
@@ -141,10 +142,13 @@ export default function Projects() {
 
                 {/* Imagen */}
                 <div className="relative aspect-[16/9] overflow-hidden rounded-t-2xl">
-                  <img
+                  <Image
                     src={project.image}
                     alt={project.title}
-                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                    fill
+                    sizes="(max-width: 768px) 100vw,
+                    (max-width: 1200px) 50vw,
+                    33vw"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/50 to-transparent" />
 
@@ -156,7 +160,7 @@ export default function Projects() {
                       rel="noopener noreferrer"
                       whileHover={{ scale: 1.2, rotate: 5 }}
                       whileTap={{ scale: 0.9 }}
-                      className="p-2 bg-black/50 backdrop-blur-sm rounded-full text-cyan-400 hover:text-white hover:bg-cyan-500/50 transition-all duration-300 neon-glow"
+                      className="p-2 bg-black/50 backdrop-blur-sm rounded-full text-cyan-400 hover:text-white hover:bg-cyan-800 transition-all duration-300 neon-glow"
                     >
                       <ExternalLink className="w-4 h-4" />
                     </motion.a>

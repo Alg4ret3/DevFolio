@@ -1,34 +1,34 @@
-import './globals.css';
-import type { Metadata } from 'next';
-import { Orbitron, Poppins } from 'next/font/google';
+import "./globals.css";
+import type { Metadata } from "next";
+import { Orbitron, Poppins } from "next/font/google";
+import ParticlesBackground from "../components/ui/ParticlesBackground";
 
-const orbitron = Orbitron({ 
-  subsets: ['latin'],
-  variable: '--font-orbitron',
-  weight: ['400', '500', '700', '900']
+const orbitron = Orbitron({
+  subsets: ["latin"],
+  variable: "--font-orbitron",
+  weight: ["400", "500", "700", "900"],
 });
 
-const poppins = Poppins({ 
-  subsets: ['latin'],
-  variable: '--font-poppins',
-  weight: ['300', '400', '500', '600', '700']
+const poppins = Poppins({
+  subsets: ["latin"],
+  variable: "--font-poppins",
+  weight: ["300", "400", "500", "600", "700"],
 });
 
 export const metadata: Metadata = {
-  title: 'Sergio Muñoz | Full Stack Developer',
-  description: 'Desarrollador Full Stack especializado en tecnologías modernas y experiencias digitales innovadoras',
-  themeColor: '#000000',
+  title: "Sergio Muñoz | Full Stack Developer",
+  description:
+    "Desarrollador Full Stack especializado en tecnologías modernas y experiencias digitales innovadoras",
+  themeColor: "#000000",
   icons: {
     icon: [
-      { url: '/favicon.ico' },
-      { url: '/favicon-16x16.png', sizes: '16x16', type: 'image/png' },
-      { url: '/favicon-32x32.png', sizes: '32x32', type: 'image/png' },
+      { url: "/favicon.ico" },
+      { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
+      { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
     ],
-    apple: '/apple-touch-icon.png',
-    other: [
-      { rel: 'manifest', url: '/site.webmanifest' }
-    ]
-  }
+    apple: "/apple-touch-icon.png",
+    other: [{ rel: "manifest", url: "/site.webmanifest" }],
+  },
 };
 
 export default function RootLayout({
@@ -38,7 +38,16 @@ export default function RootLayout({
 }) {
   return (
     <html lang="es" className="scroll-smooth">
-      <body className={`${orbitron.variable} ${poppins.variable} bg-black text-white min-h-screen overflow-x-hidden`}>
+      <body
+        className={`${orbitron.variable} ${poppins.variable} bg-black text-white min-h-screen overflow-x-hidden`}
+      >
+        {/* Partículas en todo el fondo */}
+          {/* Partículas detrás de todo */}
+        <div className="fixed inset-0 -z-10">
+          <ParticlesBackground />
+        </div>
+
+        {/* Contenido */}
         {children}
       </body>
     </html>

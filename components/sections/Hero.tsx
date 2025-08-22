@@ -1,9 +1,9 @@
 "use client";
 
 import { motion, Variants } from "framer-motion";
-import { ChevronDown, Github, Linkedin, FileText } from "lucide-react";
+import { ChevronDown, FileText } from "lucide-react";
 
-import { FaWhatsapp } from "react-icons/fa";
+import { FaWhatsapp, FaGithub, FaLinkedin } from "react-icons/fa";
 import Image from "next/image";
 
 export default function Hero() {
@@ -119,24 +119,24 @@ export default function Hero() {
         >
           {[
             {
-              icon: Github,
+              icon: FaGithub,
               href: "https://github.com/Alg4ret3",
-              color: "hover:text-cyan-400",
+              color: "text-gray-400 hover:text-white transition",
             },
             {
-              icon: Linkedin,
+              icon: FaLinkedin,
               href: "https://www.linkedin.com/in/sergio-mu%C3%B1oz-b75bba208/",
-              color: "hover:text-yellow-400",
+              color: "text-cyan-600 hover:text-cyan-400 transition",
             },
             {
               icon: FaWhatsapp,
               href: "https://wa.me/573170098770",
-              color: "hover:text-green-400",
+              color: "text-green-600 hover:text-green-400 transition",
             },
             {
               icon: FileText,
               href: "/Hoja_Vida_Sergio_Muñoz.pdf",
-              color: "hover:text-red-400",
+              color: "text-red-500 hover:text-red-400 transition",
               download: true,
             },
           ].map((social, index) => (
@@ -146,7 +146,7 @@ export default function Hero() {
               {...(social.download ? { download: true } : {})}
               whileHover={{ scale: 1.2, rotate: 5 }}
               whileTap={{ scale: 0.9 }}
-              className={`text-gray-400 ${social.color} transition-colors duration-300 neon-glow`}
+              className={`text-cyan-400 ${social.color} transition-colors duration-300 neon-glow`}
             >
               <social.icon className="w-6 h-6" />
             </motion.a>
