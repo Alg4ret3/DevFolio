@@ -66,12 +66,13 @@ export default function Hero() {
           variants={itemVariants}
           className="text-4xl md:text-6xl lg:text-7xl font-orbitron font-bold mb-6"
         >
-          <span className="text-white">Hola, soy</span>
+          <span className="text-white">Hola, soy Sergio Muñoz</span>
           <br />
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-600 via-magenta-600 to-green-600 ">
-            Sergio Developer
+            Ingeniero Informático | Full Stack & Mobile Developer 
           </span>
         </motion.h1>
+        
 
         <motion.p
           variants={itemVariants}
