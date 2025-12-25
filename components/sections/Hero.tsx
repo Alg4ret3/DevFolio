@@ -69,10 +69,9 @@ export default function Hero() {
           <span className="text-white">Hola, soy Sergio Muñoz</span>
           <br />
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-600 via-magenta-600 to-green-600 ">
-            Ingeniero Informático | Full Stack & Mobile Developer 
+            Ingeniero Informático | Full Stack & Mobile Developer
           </span>
         </motion.h1>
-        
 
         <motion.p
           variants={itemVariants}
@@ -100,18 +99,17 @@ export default function Hero() {
             Ver Proyectos
           </motion.button>
 
-          <motion.button
+          <motion.a
+            href="https://wa.me/573170098770"
+            target="_blank"
+            rel="noopener noreferrer"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="px-8 py-3 border border-cyan-400 rounded-lg font-poppins font-semibold text-cyan-400 hover:bg-cyan-400/10 neon-border transition-all duration-300"
-            onClick={() =>
-              document
-                .getElementById("contact")
-                ?.scrollIntoView({ behavior: "smooth" })
-            }
+            className="inline-block px-8 py-3 border border-cyan-400 rounded-lg font-poppins font-semibold text-cyan-400 hover:bg-cyan-400/10 neon-border transition-all duration-300"
+            aria-label="Contactar a Sergio Muñoz por WhatsApp"
           >
             Contáctame
-          </motion.button>
+          </motion.a>
         </motion.div>
 
         <motion.div
@@ -136,7 +134,7 @@ export default function Hero() {
             },
             {
               icon: FileText,
-              href: "/Hoja_Vida_Sergio_Muñoz.pdf",
+              href: "/Cv_DevSergioMuñoz.pdf",
               color: "text-red-500 hover:text-red-400 transition",
               download: true,
             },

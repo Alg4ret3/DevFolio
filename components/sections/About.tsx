@@ -8,7 +8,6 @@ export default function About() {
     { name: "Frontend", level: 95, color: "from-cyan-400 to-cyan-600" },
     { name: "Backend", level: 90, color: "from-red-400 to-red-600" },
     { name: "Mobile", level: 85, color: "from-green-400 to-green-600" },
-    { name: "DevOps", level: 80, color: "from-yellow-400 to-yellow-600" },
   ];
 
   const technologies = [
