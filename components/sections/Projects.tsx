@@ -15,7 +15,6 @@ export default function Projects() {
         "https://images.pexels.com/photos/6612717/pexels-photo-6612717.jpeg?auto=compress&cs=tinysrgb&dpr=1&?w=662&h=372",
 
       tech: ["Python", "Qt Designer", "SQL", "SQLite", "Windows 10/11"],
-      liveUrl: "#",
       githubUrl: "https://github.com/Alg4ret3/SystemSystock.git",
       featured: true,
     },
@@ -27,7 +26,7 @@ export default function Projects() {
       image:
         "https://images.pexels.com/photos/35360297/pexels-photo-35360297.jpeg?auto=compress&cs=tinysrgb&dpr=1&?w=662&h=372",
       tech: ["Vite", "React", "TypeScript", "JavaScript", "Tailwind CSS"],
-      liveUrl: "#https://www.funpazyesperanza.org/",
+      liveUrl: "https://www.funpazyesperanza.org/",
       githubUrl: "https://github.com/Alg4ret3/FundacionCampaes.git",
       featured: true,
     },
@@ -83,7 +82,7 @@ export default function Projects() {
       image:
         "https://images.pexels.com/photos/208512/pexels-photo-208512.jpeg?auto=compress&cs=tinysrgb&dpr=1&?w=662&h=372",
       tech: ["React", "JavaScript", "Python", "FastAPI", "OpenAI API"],
-      liveUrl: "#",
+      liveUrl: "https://farmasystem-bice.vercel.app/",
       githubUrl: "https://github.com/Alg4ret3/FarmaSystem.git",
       featured: false,
     },
